@@ -64,20 +64,20 @@ function App() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    
+
     if (name === 'phone') {
       // Allow only numbers and cap at exactly 10 digits
       const cleaned = value.replace(/\D/g, '').slice(0, 10);
       setFormData((prev) => ({ ...prev, [name]: cleaned }));
       return;
     }
-    
+
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === 'YOUR_ACCESS_KEY_HERE') {
       alert('Please configure your Web3Forms access key at the top of src/main.jsx to receive emails!');
       return;
@@ -274,11 +274,11 @@ function App() {
             </div>
             <div className="info-item">
               <Phone size={18} />
-              <a href="tel:+910000000000">+91 9739295374</a>
+              <a href="tel:+919739295374">+91 9739295374</a>
             </div>
             <div className="info-item">
               <Mail size={18} />
-              <a href="mailto:info@rubblerock.com">info@rubblerock.com</a>
+              <a href="mailto:ramesh@rubblerock.in">ramesh@rubblerock.in</a>
             </div>
           </address>
         </div>
@@ -295,32 +295,32 @@ function App() {
           <form className="contact-form" onSubmit={handleSubmit}>
             <input type="hidden" name="ccemail" value="ramesh@rubblerocks.in" />
             <div className="input-group">
-              <input 
+              <input
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                aria-label="Name" 
-                placeholder="Name" 
+                aria-label="Name"
+                placeholder="Name"
                 required
               />
             </div>
             <div className="input-group">
-              <input 
+              <input
                 type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                aria-label="Phone" 
-                placeholder="Phone (10 digits)" 
+                aria-label="Phone"
+                placeholder="Phone (10 digits)"
                 required
               />
             </div>
             <div className="input-group full-width">
-              <select 
+              <select
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                aria-label="Service interest" 
+                aria-label="Service interest"
                 defaultValue=""
               >
                 <option value="" disabled>Service interest</option>
@@ -331,12 +331,12 @@ function App() {
               </select>
             </div>
             <div className="input-group full-width">
-              <textarea 
+              <textarea
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                aria-label="Message" 
-                placeholder="Briefly describe your requirement" 
+                aria-label="Message"
+                placeholder="Briefly describe your requirement"
               />
             </div>
             {status.error && <p className="form-error">{status.error}</p>}

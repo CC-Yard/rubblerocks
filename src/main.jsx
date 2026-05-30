@@ -274,7 +274,7 @@ function App() {
             </div>
             <div className="info-item">
               <Phone size={18} />
-              <a href="tel:+910000000000">+91 99000 00000</a>
+              <a href="tel:+910000000000">+91 9739295374</a>
             </div>
             <div className="info-item">
               <Mail size={18} />
